@@ -25,16 +25,14 @@ products = [
 
 products_count = len(products)
 
-
 print ("--------------")
 print ("THERE ARE " + str(products_count) + " PRODUCTS:")
 print ("--------------")
 
-
+for p in products:
+    print(p["name"])
 
 # 
-# 
-#
 #  + All-Seasons Salt ($4.99)
 #  + Chocolate Fudge Layer Cake ($18.50)
 #  + Chocolate Sandwich Cookies ($3.50)
