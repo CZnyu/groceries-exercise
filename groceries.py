@@ -23,6 +23,11 @@ products = [
     {"id":20, "name": "Pomegranate Cranberry & Aloe Vera Enrich Drink", "department": "beverages", "aisle": "juice nectars", "price": 4.25}
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
+
+#
+#PRODUCTS (PART I)
+#
+
 products_count = len(products)
 
 print ("--------------")
@@ -39,7 +44,27 @@ for p in sorted_products:
     price_usd = "${0:.2f}".format(p["price"])
     print(" ... " + p["name"] + " (" + str(price_usd) + ")")
 
-# 
+#
+# DEPARTMENTS (PART II)
+#
+
+departments = []
+for p in products:
+    #print(p["department"])
+    #departments.append(p["department"])
+    if p["department"] not in departments:
+        departments.append(p["department"])
+
+department_count = len(departments)
+
+print("--------------")
+print("THERE ARE " + str(department_count) + " DEPARTMENTS:")
+print("--------------")
+
+for d in departments:
+    print(d)
+
+
 #  + All-Seasons Salt ($4.99)
 #  + Chocolate Fudge Layer Cake ($18.50)
 #  + Chocolate Sandwich Cookies ($3.50)
